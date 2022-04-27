@@ -2,7 +2,6 @@
 session_start();
 //session_unset();
 //session_destroy();
-header('Location:products.php');
 
 if(!empty($_SESSION["cart"])) {
 	foreach($_SESSION["cart"] as $k => $v) {
