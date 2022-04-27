@@ -45,6 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }else{
                 foreach($_SESSION['cart'] as $a => $p) {
                     if ($p['id'] == $data) {
+                        $_SESSION['cart'][$a]["quantity"] = $p["quantity"]* $p["price"];
                         $_SESSION['cart'][$a]["quantity"] = $p["quantity"]+1;
                         $flag=1;
                     }
